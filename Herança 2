@@ -1,0 +1,30 @@
+public class Veiculo {
+    protected String marca;
+
+    public Veiculo(String marca) {
+        this.marca = marca;
+    }
+
+    public void ligar() {
+        System.out.println("O veículo está ligado.");
+    }
+}
+
+public class Carro extends Veiculo {
+    private int quantidadePortas;
+
+    public Carro(String marca, int quantidadePortas) {
+        super(marca);
+        this.quantidadePortas = quantidadePortas;
+    }
+
+    public void abrirPortaMala() {
+        System.out.println("Porta-malas aberto.");
+    }
+
+    public static void main(String[] args) {
+        Carro meuCarro = new Carro("Toyota", 4);
+        meuCarro.ligar(); 
+        meuCarro.abrirPortaMala(); 
+    }
+}
