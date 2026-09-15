@@ -1,0 +1,23 @@
+class Motor {
+    public void roncar() {
+        System.out.println("Vroom vroom! Motor funcionando.");
+    }
+}
+
+public class CarroComposicao {
+    private Motor motor;
+
+    public CarroComposicao() {
+        this.motor = new Motor();
+    }
+
+    public void ligarCarro() {
+        System.out.println("Girando a chave...");
+        motor.roncar();
+    }
+
+    public static void main(String[] args) {
+        CarroComposicao carro = new CarroComposicao();
+        carro.ligarCarro();
+    }
+}
